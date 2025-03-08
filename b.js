@@ -22,4 +22,12 @@ for (let i = 0; i < 10000; i++) {
     checkTestVar();
 }
 
-stats();
+console.log(stats());
+
+document.getElementById("stats").innerText = stats();
+
+if (anomalyCounter) {
+    document.getElementById("affected").innerText = "This browser version is affected."
+} else {
+    document.getElementById("affected").innerText = "This browser version is probably not affected."
+}

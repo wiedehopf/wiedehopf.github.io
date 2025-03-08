@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
-  <body>
-    This is a minimal reproducer for a Chromium browser bug.<br>
+  <body style="font-family: sans-serif">
+    <br>
+    This is a minimal reproducer for a Chromium browser bug:<br>
+    <a href="https://issues.chromium.org/issues/401652934">https://issues.chromium.org/issues/401652934</a><br>
     <br>
     A variable is read as NaN despite not being NaN.<br>
-    <br>
-    Update: setInterval context not necessary to reproduce
     <br>
     While this reproducer assigns testVar the value 0 * Math.PI,<br>
     i've observed this bug in a different context i can't reproduce where a simple <br>
@@ -17,14 +17,18 @@
     The function accessing testVar being in a different js source file was a<br>
     requirement to reproduce at least for me.<br>
     <br>
-    Open the development console to check if your browser is affected.<br>
-    If you see "testVar is NaN" then the browser is affected.<br>
     <br>
-    Expected log for an unaffected browser will look like this:<br>
-    "counters: anomaly: 0 correct: 10000 beforeAnomaly: 10000"<br>
     <br>
-    Expected log for an affected browser will look something like this:<br>
-    "counters: anomaly: 2456 correct: 7544 beforeAnomaly: 10"<br>
+    <div id=affected>
+    </div><br>
+    <br>
+    <div id=stats>
+    </div><br>
+    <br>
+    For more information, please read the source for a.js and b.js<br>
+    Also check the development console output.<br>
+    <br>
+    Update: setInterval context not necessary to reproduce
     <script src="a.js"></script>
     <script src="b.js"></script>
   </body>

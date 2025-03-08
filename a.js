@@ -17,5 +17,5 @@ function checkTestVar() {
 }
 
 function stats() {
-    console.log(`counters: anomaly: ${anomalyCounter} correct: ${correctCounter} beforeAnomaly: ${beforeAnomalyCounter}`);
+    return `counters: anomaly: ${anomalyCounter} correct: ${correctCounter} beforeAnomaly: ${beforeAnomalyCounter}`;
 }
