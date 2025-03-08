@@ -4,6 +4,9 @@
     This is a minimal reproducer for a Chromium browser bug.<br>
     <br>
     A variable is read as NaN despite not being NaN.<br>
+    <br>
+    Update: setInterval context not necessary to reproduce
+    <br>
     While this reproducer assigns testVar the value 0 * Math.PI,<br>
     i've observed this bug in a different context i can't reproduce where a simple <br>
     timestamp was assigned to the variable afterwards being read as NaN.<br>
@@ -16,8 +19,12 @@
     <br>
     Open the development console to check if your browser is affected.<br>
     If you see "testVar is NaN" then the browser is affected.<br>
-    Expected log for an unaffected browser will look something like this:<br>
-    "counters: anomaly: 0 beforeAnomaly: 129 correct: 129"
+    <br>
+    Expected log for an unaffected browser will look like this:<br>
+    "counters: anomaly: 0 beforeAnomaly: 10000 correct: 10000"<br>
+    <br>
+    Expected log for an affected browser will look like this:<br>
+    "counters: anomaly: 509 beforeAnomaly: 10 correct: 9491"<br>
     <script src="a.js"></script>
     <script src="b.js"></script>
   </body>
