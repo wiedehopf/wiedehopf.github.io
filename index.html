@@ -13,6 +13,11 @@
     <br>
     The function accessing testVar being in a different js source file was a<br>
     requirement to reproduce at least for me.<br>
+    <br>
+    Open the development console to check if your browser is affected.<br>
+    If you see "testVar is NaN" then the browser is affected.<br>
+    Expected log for an unaffected browser will look something like this:<br>
+    "counters: anomaly: 0 beforeAnomaly: 129 correct: 129"
     <script src="a.js"></script>
     <script src="b.js"></script>
   </body>
