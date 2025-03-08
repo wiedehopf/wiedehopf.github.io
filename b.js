@@ -2,7 +2,8 @@
     This is a minimal reproducer for a Chromium browser bug.
 
     A variable is read as NaN in setInterval context despite not being NaN.
-    While i'm multiplying 0 with Math.PI here, i've observed this bug in a different context i can't reproduce where a
+    While this reproducer assigns testVar the value 0 * Math.PI,
+    i've observed this bug in a different context i can't reproduce where a
     simple timestamp was assigned to the variable afterwards being read as NaN.
 
     For this reproducer, using the multiplication of 0 and Math.PI or Math.E seems necessary, i don't know why.
