@@ -18,7 +18,7 @@ console.log(`b.js: testVar is ${testVar}`);
 
 // same bug for multiplying with Math.E, no bug for a constant number
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 100000; i++) {
     checkTestVar();
 }
 
