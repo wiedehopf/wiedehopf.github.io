@@ -5,11 +5,11 @@
     This is a minimal reproducer for a Chromium browser bug:<br>
     <a href="https://issues.chromium.org/issues/401652934">https://issues.chromium.org/issues/401652934</a><br>
     <br>
-    A variable is read as NaN despite not being NaN.<br>
+    A variable is evaluated as NaN despite not being NaN.<br>
     <br>
     While this reproducer assigns testVar the value 0 * Math.PI,<br>
     i've observed this bug in a different context i can't reproduce where a simple <br>
-    timestamp was assigned to the variable afterwards being read as NaN.<br>
+    timestamp was assigned to the variable afterwards being evaluated as NaN.<br>
     <br>
     For this reproducer, using the multiplication of 0 and Math.PI or Math.E<br>
     seems necessary, i don't know why.<br>
