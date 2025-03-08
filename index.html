@@ -3,7 +3,7 @@
   <body>
     This is a minimal reproducer for a Chromium browser bug.<br>
     <br>
-    A variable is read as NaN in setInterval context despite not being NaN.<br>
+    A variable is read as NaN despite not being NaN.<br>
     While this reproducer assigns testVar the value 0 * Math.PI,<br>
     i've observed this bug in a different context i can't reproduce where a simple <br>
     timestamp was assigned to the variable afterwards being read as NaN.<br>

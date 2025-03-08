@@ -1,7 +1,7 @@
 /*
     This is a minimal reproducer for a Chromium browser bug.
 
-    A variable is read as NaN in setInterval context despite not being NaN.
+    A variable is read as NaN despite not being NaN.
     While this reproducer assigns testVar the value 0 * Math.PI,
     i've observed this bug in a different context i can't reproduce where a
     simple timestamp was assigned to the variable afterwards being read as NaN.
@@ -20,7 +20,10 @@ console.log(`b.js: testVar is ${testVar}`);
 
 
 console.log('setInterval(checkTestVar, 1);');
-setInterval(checkTestVar, 1);
+//setInterval(checkTestVar, 1);
 
-// this is not necessary to reproduce but interesting
-setInterval(stats, 2000);
+for (let i = 0; i < 10000; i++) {
+    checkTestVar();
+}
+
+stats();
