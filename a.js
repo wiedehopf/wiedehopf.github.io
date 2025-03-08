@@ -1,5 +1,7 @@
+let anomalyCounter = 0;
 function checkTestVar() {
     if (isNaN(testVar)) {
-        console.log("testVar is NaN");
+        anomalyCounter++;
+        console.log(`testVar is ${testVar} (${anomalyCounter})`);
     }
 }
