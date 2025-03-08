@@ -1,2 +1,5 @@
-let testVar = 0;
-
+function checkTestVar() {
+    if (isNaN(testVar)) {
+        console.log("testVar is NaN");
+    }
+}
