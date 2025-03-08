@@ -18,10 +18,6 @@ console.log(`b.js: testVar is ${testVar}`);
 
 // same bug for multiplying with Math.E, no bug for a constant number
 
-
-console.log('setInterval(checkTestVar, 1);');
-//setInterval(checkTestVar, 1);
-
 for (let i = 0; i < 10000; i++) {
     checkTestVar();
 }

@@ -4,8 +4,10 @@ let correctCounter = 0;
 function checkTestVar() {
     if (testVar != 0) {
         // testVar should always be 0
+        if (anomalyCounter == 0 ) {
+            console.log(`a.js: testVar is ${testVar} (printed only once)`);
+        }
         anomalyCounter++;
-        console.log(`a.js: testVar is ${testVar}`);
     } else {
         correctCounter++;
         if (anomalyCounter == 0) {
@@ -15,5 +17,5 @@ function checkTestVar() {
 }
 
 function stats() {
-    console.log(`counters: anomaly: ${anomalyCounter} beforeAnomaly: ${beforeAnomalyCounter} correct: ${correctCounter}`);
+    console.log(`counters: anomaly: ${anomalyCounter} correct: ${correctCounter} beforeAnomaly: ${beforeAnomalyCounter}`);
 }
